@@ -25,5 +25,4 @@ jobs:
           docker tag thiswillwork 244530008913.dkr.ecr.eu-west-1.amazonaws.com/fam-repository:$rev
           docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/fam-repository:$rev
           docker login
-          docker tag thiswillwork sofa/thiswillwork
-          docker push sofa006/famimage:thiswillwork
+          docker push sofa006/thiswillwork
