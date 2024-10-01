@@ -19,6 +19,6 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 244530008913.dkr.ecr.eu-west-1.amazonaws.com
-          docker build .  -t fam-repository
-          docker tag fam-repository:latest 244530008913.dkr.ecr.eu-west-1.amazonaws.com/fam-repository:latest
+          docker build . -t fam-repository
+          docker tag fam-repository 244530008913.dkr.ecr.eu-west-1.amazonaws.com/fam-repository:latest
           docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/fam-repository
